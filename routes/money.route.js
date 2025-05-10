@@ -1,7 +1,7 @@
 const express = require("express");
-const moneyController = require("../controllers/money.controller");
 const route = express.Router();
+const moneyController = require("../controllers/money.controller");
 
-route.post('/', moneyController.postMoney);
-route.get("/:userId", moneyController.getMoneyByUser);
+route.get("/:userId", moneyController.getMoneyByUserId);
+route.post("/", moneyController.postMoney);
 module.exports = route;
